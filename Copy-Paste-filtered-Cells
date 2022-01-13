@@ -1,0 +1,3 @@
+letzteZeileR3 = r3.Cells(Rows.Count, 3).End(xlUp).Row
+r3.Range("D11:D" & letzteZeileR3).SpecialCells(xlCellTypeVisible).Copy
+r5.Range("A6").PasteSpecial xlPasteValues
