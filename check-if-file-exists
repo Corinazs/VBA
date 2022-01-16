@@ -1,0 +1,20 @@
+Function CheckFileExists(dateiname As String) As String
+ 
+Dim strFileName As String
+Dim strFileExists As String
+ 
+    strFileName = "C:\Users\czilchschu\Desktop\XXX\" & dateiname & ".xlsx"
+    strFileExists = Dir(strFileName)
+    
+ 'PFAD ANPASSEN
+    If strFileExists = "" Then
+      fehler = MsgBox("Datei nicht vorhanden. Bitte Datei unter dem Pfad 'C:\Users\czilchschu\Desktop\XXX' ablegen und Programm erneut starten.", vbOKOnly, "Fehler")
+      
+        CheckFileExists = "fehler"
+        
+    Exit Function
+    End If
+    
+    CheckFileExists = ""
+ 
+End Function
