@@ -1,0 +1,18 @@
+Function GibFehler(dateiname As String) As String
+
+
+    Application.DisplayAlerts = False
+    On Error GoTo fehler
+    
+    
+       Workbooks.Open ("C:\Users\czilchschu\XXX\" & dateiname & ".xlsx")
+       Dir ("C:\Users\czilchschu\XXX\")
+    Application.DisplayAlerts = True
+    GibFehler = ""
+
+Exit Function
+
+fehler:
+   Err = MsgBox("Achtung! Die Datei konnte nicht gefunden werden!", vbOKOnly, "Fehler")
+    GibFehler = "Fehler!"
+End Function
