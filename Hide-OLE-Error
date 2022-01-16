@@ -1,0 +1,7 @@
+Application.DisplayAlerts = False
+
+'Set your code here, in my case I open SAP and export a huge amount of data
+'This is an easy way that works one time. You can't use that more than once in your code (otherwise an error occurs)
+
+
+Application.DisplayAlerts = True
